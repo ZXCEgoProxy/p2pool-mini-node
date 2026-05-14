@@ -28,11 +28,18 @@ Example with XMRig:
 ./xmrig -o your-railway-url:3333
 ```
 
+## Monitoring
+
+P2Pool does not have a built-in GUI. Use P2Pool Observer to check your statistics:
+- P2Pool mini: https://p2pool.io/mini/observer.html
+Enter your wallet address to view mining stats.
+
 ## Notes
 
 - The Monero blockchain sync may take several hours to days on first run.
 - Railway has storage limits; monitor usage as the blockchain grows.
 - Ensure your wallet address is correct to avoid losing mining rewards.
+- If issues persist, check Railway logs for errors.
 
 ## Support
 
