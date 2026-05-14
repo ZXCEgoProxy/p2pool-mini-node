@@ -4,16 +4,16 @@ FROM ubuntu:20.04
 RUN apt-get update && apt-get install -y wget curl bzip2 tar
 
 # Download and extract Monero CLI
-RUN wget https://github.com/monero-project/monero/releases/download/v0.18.3.1/monero-linux-x64-v0.18.3.1.tar.bz2 && \
-    tar -xjf monero-linux-x64-v0.18.3.1.tar.bz2 && \
-    mv monero-x86_64-linux-gnu-v0.18.3.1 /monero && \
-    rm monero-linux-x64-v0.18.3.1.tar.bz2
+RUN wget https://github.com/monero-project/monero/releases/download/v0.18.5.0/monero-linux-x64-v0.18.5.0.tar.bz2 && \
+    tar -xjf monero-linux-x64-v0.18.5.0.tar.bz2 && \
+    mv monero-x86_64-linux-gnu-v0.18.5.0 /monero && \
+    rm monero-linux-x64-v0.18.5.0.tar.bz2
 
 # Download and extract P2Pool
-RUN wget https://github.com/SChernykh/p2pool/releases/download/v3.7/p2pool-v3.7-linux-x64.tar.gz && \
-    tar -xzf p2pool-v3.7-linux-x64.tar.gz && \
-    mv p2pool-v3.7-linux-x64 /p2pool && \
-    rm p2pool-v3.7-linux-x64.tar.gz
+RUN wget https://github.com/SChernykh/p2pool/releases/download/v4.15/p2pool-v4.15-linux-x64.tar.gz && \
+    tar -xzf p2pool-v4.15-linux-x64.tar.gz && \
+    mv p2pool-v4.15-linux-x64 /p2pool && \
+    rm p2pool-v4.15-linux-x64.tar.gz
 
 # Expose necessary ports
 EXPOSE 18080 37888 3333
