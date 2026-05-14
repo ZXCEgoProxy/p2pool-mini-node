@@ -37,6 +37,8 @@ Enter your wallet address to view mining stats.
 ## Notes
 
 - The Monero blockchain sync may take several hours to days on first run.
+- Optimized for low resources: uses pruned blockchain (~50 GB) and P2Pool light mode (~0.6 GB RAM).
+- Minimum requirements: 1 GB RAM, 50 GB disk, 2 vCPU.
 - Railway has storage limits; monitor usage as the blockchain grows.
 - Ensure your wallet address is correct to avoid losing mining rewards.
 - If issues persist, check Railway logs for errors.
