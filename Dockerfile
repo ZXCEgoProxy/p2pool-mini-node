@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 # Install dependencies
-RUN apt-get update && apt-get install -y wget curl bzip2 tar expect
+RUN apt-get update && apt-get install -y wget curl bzip2 tar
 
 # Download and extract Monero CLI
 RUN wget https://downloads.getmonero.org/cli/monero-linux-x64-v0.18.5.0.tar.bz2 && \

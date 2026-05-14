@@ -1,26 +1,7 @@
 #!/bin/bash
 
-# Generate wallet if not provided
-if [ -z "$WALLET_ADDRESS" ]; then
-  echo "Generating new Monero wallet..."
-  expect << EOF > /tmp/generate_output.txt
-spawn /monero/monero-wallet-cli --generate-new-wallet /tmp/wallet --password "" --mnemonic-language English --restore-height 0
-expect "Generated new wallet:"
-send "exit\r"
-expect eof
-EOF
-  expect << EOF > /tmp/address_output.txt
-spawn /monero/monero-wallet-cli --wallet-file /tmp/wallet --password "" --command "address"
-expect "Address:"
-set buffer \$expect_out(buffer)
-send "exit\r"
-expect eof
-EOF
-  WALLET=$(grep "Address:" /tmp/address_output.txt | awk '{print $2}' | tr -d '\r')
-  echo "Generated wallet address: $WALLET"
-else
-  WALLET=$WALLET_ADDRESS
-fi
+# Set wallet address (use provided or default)
+WALLET=${WALLET_ADDRESS:-"4AL6QjWtF4RCyPzPT7Ew3khPuqhmcJC9BQe9Cpxvv3noevJyp23YLTySZpHzWZyb1EEcGd8FRurTpWjcQmdJJgxzUYSFyBC"}
 
 # Start Monero daemon
 echo "Starting Monero daemon..."
