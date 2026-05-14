@@ -11,7 +11,7 @@ This project sets up a P2Pool mini node with a Monero daemon for decentralized m
 
 1. Fork or clone this repository.
 2. Connect your GitHub repository to Railway.
-3. (Optional) Edit `railway.toml` to set your `WALLET_ADDRESS` or leave empty for auto-generation.
+3. In Railway dashboard, go to Variables and add `WALLET_ADDRESS` with your Monero wallet address (e.g., 4AL6QjWtF4RCyPzPT7Ew3khPuqhmcJC9BQe9Cpxvv3noevJyp23YLTySZpHzWZyb1EEcGd8FRurTpWjcQmdJJgxzUYSFyBC).
 4. Deploy the project. Railway will build the Docker image and run the services.
 
 ## Services
