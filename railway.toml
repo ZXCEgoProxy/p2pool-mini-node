@@ -1,0 +1,2 @@
+[env]
+WALLET_ADDRESS = ""  # Leave empty to auto-generate a new wallet, or set your Monero wallet address here
